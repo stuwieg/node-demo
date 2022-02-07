@@ -6,15 +6,13 @@ phases:
     commands:
       # Install dependencies needed
       - npm install
-      - echo Installing NPM..
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
-      - echo Installing awscli..
-  pre_build:
-    commands:
-      # Build the react app to give an optimized production build
-      - npm run build
+  # pre_build:
+  #   commands:
+  #     # Build the react app to give an optimized production build
+  #     - npm run build
   build:
     commands:
       # Copy the content of build folder into website s3 bucket
