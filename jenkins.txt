@@ -1,0 +1,5 @@
+https://medium.com/@kalyanshettynetra/install-jenkins-on-amazon-linux-2-instance-52105b5bc7e1
+
+https://www.jenkins.io/doc/pipeline/tour/hello-world/
+
+http://10.60.39.84:8080/
