@@ -6,7 +6,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building'
+                deleteDir()
+                checkout scm
+                sh 'npm install'
+                sh 'npm run lighthouse'
             }
         }
         stage('Test') {
