@@ -4,14 +4,18 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
-      # Install dependencies needed
+      - cp . .
       - npm install
+      - npm run
+      - lighthouse http://localhost:3000/
+      # # Install dependencies needed
+      # - npm install
 
-      # Upgrade AWS CLI to the latest version
-      - pip install --upgrade awscli
-  build:
-    commands:
-      # Copy the content of build folder into website s3 bucket
-      - ls
-      - aws s3 cp . s3://elasticbeanstalk-eu-west-1-448715041936/
-      - ls
+      # # Upgrade AWS CLI to the latest version
+      # - pip install --upgrade awscli
+  # build:
+  #   commands:
+  #     # Copy the content of build folder into website s3 bucket
+  #     - ls
+  #     - aws s3 cp . s3://elasticbeanstalk-eu-west-1-448715041936/
+  #     - ls
