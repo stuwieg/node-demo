@@ -9,11 +9,9 @@ phases:
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
-  # pre_build:
-  #   commands:
-  #     # Build the react app to give an optimized production build
-  #     - npm run build
   build:
     commands:
       # Copy the content of build folder into website s3 bucket
-      - aws s3 sync build/ s3://elasticbeanstalk-eu-west-1-448715041936/
+      - ls
+      - aws s3 cp . s3://elasticbeanstalk-eu-west-1-448715041936/
+      - ls
